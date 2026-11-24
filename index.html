@@ -125,15 +125,15 @@ let lastTab='home',newestFirst=true;
 const CUSTOM_KEY='medicalRoboticsCustomArticlesV1';
 let customArticles=loadCustomArticles();
 const db={
-t1:'<h1>Humanoid Robots for Clinical Care</h1><div class="box"><strong>Fourier GR-3 ("Care-bot")</strong> — 165 cm, 71 kg, 31 tactile sensors. Price: $80k–$120k (~€163k in EU).</div><div class="box"><strong>Unitree G1</strong> — Compact research humanoid starting from €16,000.</div>',
-t2:'<h1>Wearable Exoskeletons</h1><div class="box"><strong>ABLE Human Motion (Spain)</strong> — Lightweight (~10 kg) CE-certified lower-limb exoskeleton.</div><div class="box"><strong>Upper-Limb Rehab</strong> — Fourier ArmMotus & AFH hand therapy systems.</div>',
-t3:'<h1>Surgical & Magnetic Microrobots</h1><div class="box"><strong>Nanoflex Robotics</strong> — Magnetically steered soft microcatheters for remote stroke surgery.</div><div class="box"><strong>Agilis Robotics</strong> — 2.8–3.5 mm flexible endoscopic robotic arms.</div>',
-t4:'<h1>Brain-Computer Interfaces (BCI)</h1><div class="box"><strong>CorTec Brain Interchange™</strong> — Battery-free wireless closed-loop cortical implant (32 channels, <25 ms latency).</div>',
-t5:'<h1>Portable Ultrasound Scanners</h1><div class="box"><strong>No-Subscription Probes (Aco Healthcare neo, Mindray TE Air)</strong> — €1,500 – €4,500.</div><div class="box"><strong>Subscription Probes (Butterfly iQ+)</strong> — ~€2,700 + annual fee.</div>',
-t6:'<h1>Cold Plasma & Hypoxic Therapy</h1><div class="box"><strong>Adtec SteriPlas</strong> — Cold argon plasma for chronic wound healing.</div><div class="box"><strong>Ai Mediq ReOxy®</strong> — Intermittent hypoxic-hyperoxic respiratory therapy.</div>',
-t7:'<h1>Actuators, Gears & Force Sensors</h1><div class="box"><strong>Suppliers:</strong> Hiwin, igus, Festo, Gear Motion, Kistler Instrumente.</div>',
-t8:'<h1>Amorphous Metals, Nitinol & Micro-CNC</h1><div class="box"><strong>Tech:</strong> Heraeus Amloy, ADMEDES, JMTEC (0.1 mm), Acme Monaco, Materialise.</div>',
-t9:'<h1>Physical Activity, Fitness & Resilience</h1><div class="box"><strong>Movement & Wellbeing</strong> — The role of regular physical activity, mobility, strength, balance, and endurance in everyday wellbeing.</div><div class="box"><strong>Adaptive Sports & Inclusive Fitness</strong> — Sport, accessible exercise, and movement opportunities for people with different abilities.</div><div class="box"><strong>Rehabilitation & Recovery</strong> — How physiotherapy, assistive technologies, and carefully guided activity can support recovery and independence.</div><div class="box"><strong>Human Resilience</strong> — Personal stories of persistence, motivation, and overcoming physical challenges.</div>',
+t1:'<h1>Humanoid Robots for Clinical Care</h1><p>Articles in this topic will appear here.</p>',
+t2:'<h1>Wearable Exoskeletons</h1><p>Articles in this topic will appear here.</p>',
+t3:'<h1>Surgical & Magnetic Microrobots</h1><p>Articles in this topic will appear here.</p>',
+t4:'<h1>Brain-Computer Interfaces (BCI)</h1><p>Articles in this topic will appear here.</p>',
+t5:'<h1>Portable Ultrasound Scanners</h1><p>Articles in this topic will appear here.</p>',
+t6:'<h1>Cold Plasma & Hypoxic Therapy</h1><p>Articles in this topic will appear here.</p>',
+t7:'<h1>Actuators, Gears & Force Sensors</h1><p>Articles in this topic will appear here.</p>',
+t8:'<h1>Amorphous Metals, Nitinol & Micro-CNC</h1><p>Articles in this topic will appear here.</p>',
+t9:'<h1>Physical Activity, Fitness & Resilience</h1><p>Articles in this topic will appear here.</p>',
 };
 function loadCustomArticles(){try{return JSON.parse(localStorage.getItem(CUSTOM_KEY)||'[]')}catch(e){return []}}
 function saveCustomArticles(){try{localStorage.setItem(CUSTOM_KEY,JSON.stringify(customArticles));return true}catch(e){return false}}
