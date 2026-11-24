@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedTech & Robotics Pulse — Blog & Topics</title>
+<style>
+:root{--bg:#f8fafc;--surface:#fff;--alt:#f1f5f9;--text:#0f172a;--muted:#475569;--primary:#2563eb;--border:#e2e8f0}
+[data-theme="dark"]{--bg:#070b14;--surface:#0f172a;--alt:#1e293b;--text:#f8fafc;--muted:#94a3b8;--primary:#3b82f6;--border:#1e293b}
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+body{background:var(--bg);color:var(--text);line-height:1.6}
+header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+.nav{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:800;color:var(--primary);cursor:pointer}
+.nav-menu{display:flex;align-items:center;gap:18px}
+.nav-link{font-weight:600;font-size:15px;color:var(--muted);cursor:pointer;padding-bottom:2px}
+.nav-link.active,.nav-link:hover{color:var(--primary);border-bottom:2px solid var(--primary)}
+.btn-t{background:var(--alt);border:1px solid var(--border);color:var(--text);padding:6px 14px;border-radius:20px;cursor:pointer;font-weight:600}
+.hero-art{background:#050b18;padding:0;text-align:center;overflow:hidden}.hero-art img{display:block;width:100%;max-width:1600px;height:auto;margin:0 auto}
+.heritage-strip{position:relative;overflow:hidden;background:#071426;border-top:3px solid #d99a32;margin-top:42px}.heritage-strip img{display:block;width:100%;height:190px;object-fit:cover;object-position:center 58%;opacity:.88}.heritage-caption{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:18px;background:linear-gradient(90deg,rgba(3,10,24,.25),rgba(3,10,24,.58),rgba(3,10,24,.25));color:#fff;text-shadow:0 2px 8px #000}.heritage-caption span{font-size:12px;letter-spacing:3px;color:#ffd27a;font-weight:700}.heritage-caption strong{font-family:Georgia,serif;font-size:clamp(18px,3vw,30px);margin-top:5px}
+@media(max-width:600px){.heritage-strip img{height:150px}.heritage-caption span{letter-spacing:1.5px}}.hero{background:linear-gradient(135deg,#060a13,#1e3a8a);color:#fff;padding:28px 20px;text-align:center}
+.hero h1{font-size:32px;margin-bottom:10px}
+.hero p{color:#cbd5e1;margin-bottom:20px}
+.search{width:100%;max-width:460px;padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.15);color:#fff;font-size:15px}
+.wrap{max-width:1100px;margin:30px auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:var(--surface);border-radius:14px;overflow:hidden;border:1px solid var(--border);display:flex;flex-direction:column;justify-content:space-between}
+.vis{height:110px;display:flex;align-items:center;justify-content:center;font-size:38px;color:#fff}
+.c1{background:linear-gradient(135deg,#0f172a,#2563eb)}.c2{background:linear-gradient(135deg,#064e3b,#10b981)}.c3{background:linear-gradient(135deg,#3b0764,#9333ea)}.c4{background:linear-gradient(135deg,#1e1b4b,#4f46e5)}.c5{background:linear-gradient(135deg,#0c4a6e,#06b6d4)}.c6{background:linear-gradient(135deg,#7c2d12,#f97316)}.c7{background:linear-gradient(135deg,#1e293b,#475569)}.c8{background:linear-gradient(135deg,#18181b,#52525b)}.c9{background:linear-gradient(135deg,#78350f,#f59e0b)}
+.c-body{padding:20px}
+.tag{background:rgba(37,99,235,.12);color:var(--primary);font-size:12px;font-weight:700;padding:3px 8px;border-radius:5px;display:inline-block;margin-bottom:8px}
+.card h3{font-size:18px;margin-bottom:8px;cursor:pointer}
+.card p{color:var(--muted);font-size:14px;margin-bottom:16px}
+.blog-post{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:18px}
+.blog-meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+.blog-post h2{font-size:21px;margin-bottom:10px;cursor:pointer}
+.blog-post h2:hover{color:var(--primary)}
+.btn{background:var(--primary);color:#fff;padding:8px 16px;border-radius:8px;border:none;cursor:pointer;font-weight:600;text-decoration:none;display:inline-block}
+.topic{max-width:800px;margin:20px auto;background:var(--surface);padding:30px;border-radius:16px;border:1px solid var(--border)}
+.box{background:var(--alt);border-left:4px solid var(--primary);padding:14px 18px;margin:14px 0;border-radius:0 8px 8px 0}
+footer{background:#060a13;color:#94a3b8;text-align:center;padding:24px;margin-top:50px;font-size:14px}
+.hidden{display:none!important}
+.editor-panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px;margin:0 0 26px}
+.editor-panel h2{margin-bottom:6px}.editor-note{color:var(--muted);font-size:13px;margin:0 0 16px}
+.editor-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.editor-field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.editor-field label{font-size:13px;font-weight:700;color:var(--muted)}
+.editor-field input,.editor-field textarea,.editor-field select{width:100%;padding:11px 12px;border:1px solid var(--border);border-radius:9px;background:var(--bg);color:var(--text);font:inherit}
+.editor-field textarea{min-height:190px;resize:vertical}.image-preview-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px;margin-top:10px}.image-preview-grid img{width:100%;height:90px;object-fit:cover;border-radius:8px;border:1px solid var(--border)}.article-images{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:22px 0}.article-images figure{margin:0}.article-images img{width:100%;height:auto;max-height:520px;object-fit:contain;border-radius:12px;background:var(--alt)}.editor-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.local-badge{display:inline-block;background:rgba(16,185,129,.12);color:#059669;border-radius:20px;padding:3px 9px;font-size:12px;font-weight:700}
+@media(max-width:650px){.editor-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<div class="logo" onclick="showTab('home')">MedTech & Robotics</div>
+<div class="nav-menu">
+<span class="nav-link active" id="navHome" onclick="showTab('home')">Topics (9)</span>
+<span class="nav-link" id="navBlog" onclick="showTab('blog')">All Articles (Blog)</span>
+<button class="btn-t" id="tBtn" onclick="theme()">🌙 Dark</button>
+</div>
+</div></header>
+<div id="homeView">
+<section class="hero-art"><img src="medical_robotics_hero_top.jpg" alt="Medical Robotics media portal banner showing robotics, rehabilitation, physical activity and human resilience"></section>
+<section class="hero">
+<h1>Medical Robotics — Media Portal & Blog</h1>
+<p>Explore 9 technology and human-performance topics, or browse the latest articles and insights</p>
+<input type="text" id="q" class="search" placeholder="Search topics..." onkeyup="find()">
+</section>
+<div class="wrap"><div class="grid">
+<div class="card"><div class="vis c1">🤖</div><div class="c-body"><span class="tag">Robotics & AI</span><h3 onclick="openItem('t1','home')">Humanoid Robots & Care Assistants</h3><p>Anthropomorphic assistant robots for clinical care and AI labs.</p><button class="btn" onclick="openItem('t1','home')">Open Topic</button></div></div>
+<div class="card"><div class="vis c2">🦾</div><div class="c-body"><span class="tag">Rehabilitation</span><h3 onclick="openItem('t2','home')">Wearable Exoskeletons & Therapy</h3><p>Lightweight CE-certified exoskeletons for gait recovery.</p><button class="btn" onclick="openItem('t2','home')">Open Topic</button></div></div>
+<div class="card"><div class="vis c3">🔬</div><div class="c-body"><span class="tag">Surgery</span><h3 onclick="openItem('t3','home')">Surgical & Magnetic Microrobots</h3><p>Flexible endoscopic manipulators and magnetic brain microcatheters.</p><button class="btn" onclick="openItem('t3','home')">Open Topic</button></div></div>
+<div class="card"><div class="vis c4">🧠</div><div class="c-body"><span class="tag">Neurotech</span><h3 onclick="openItem('t4','home')">Brain-Computer Interfaces (BCI)</h3><p>Battery-free wireless implantable closed-loop systems.</p><button class="btn" onclick="openItem('t4','home')">Open Topic</button></div></div>
+<div class="card"><div class="vis c5">📱</div><div class="c-body"><span class="tag">Diagnostics</span><h3 onclick="openItem('t5','home')">Portable & Handheld Ultrasound</h3><p>Wireless smartphone probes for clinics and veterinary care.</p><button class="btn" onclick="openItem('t5','home')">Open Topic</button></div></div>
+<div class="card"><div class="vis c6">⚡</div><div class="c-body"><span class="tag">Therapy</span><h3 onclick="openItem('t6','home')">Cold Plasma & Hypoxic Therapy</h3><p>Antibiotic-free wound healing and altitude breathing systems.</p><button class="btn" onclick="openItem('t6','home')">Open Topic</button></div></div>
+<div class="card"><div class="vis c7">⚙️</div><div class="c-body"><span class="tag">Drives</span><h3 onclick="openItem('t7','home')">Gears, Screws & Force Sensors</h3><p>Strain wave gears, polymer joints, and tactile finger sensors.</p><button class="btn" onclick="openItem('t7','home')">Open Topic</button></div></div>
+<div class="card"><div class="vis c8">🔩</div><div class="c-body"><span class="tag">Materials</span><h3 onclick="openItem('t8','home')">Amorphous Metals & Nitinol</h3><p>"Liquid metal" gears, shape-memory alloys, and 0.1 mm micro-CNC.</p><button class="btn" onclick="openItem('t8','home')">Open Topic</button></div></div>
+<div class="card"><div class="vis c9">🏃</div><div class="c-body"><span class="tag">Movement & Recovery</span><h3 onclick="openItem('t9','home')">Physical Activity, Fitness & Resilience</h3><p>Movement, adaptive sports, physical training, motivation, and the human journey of overcoming challenges.</p><button class="btn" onclick="openItem('t9','home')">Open Topic</button></div></div>
+</div></div></div>
+<section class="heritage-strip" aria-label="Ancient architecture and mountain landscapes">
+  <img src="medical_robotics_heritage_strip.jpg" alt="A separate panorama of ancient architecture, historic landmarks and mountain scenery">
+  <div class="heritage-caption"><span>HISTORY · HERITAGE · HUMANITY</span><strong>Inspired by human achievement across generations</strong></div>
+</section>
+<div id="blogView" class="wrap hidden">
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:24px">
+<div><h1 style="margin-bottom:4px">All Articles & News Feed</h1><p style="color:var(--muted)">Chronological archive by date</p></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn hidden" id="writeArticleBtn" onclick="toggleEditor()">＋ Write an Article</button><button class="btn-t" id="sortBtn" onclick="toggleSort()">↓ Newest First</button></div>
+</div>
+<section id="cloudAccess" class="editor-panel" style="margin-bottom:18px">
+<h2>Cloud editor access</h2>
+<p class="editor-note" id="cloudAuthStatus">Sign in with the administrator email to publish articles to the shared cloud archive.</p>
+<div id="cloudLogin" class="editor-actions"><input id="adminEmail" type="email" autocomplete="email" placeholder="Administrator email" style="max-width:320px;padding:12px;border:1px solid var(--border);border-radius:9px;background:var(--bg);color:var(--text)"><button class="btn" type="button" onclick="sendAdminLogin()">Send sign-in link</button></div>
+<div id="cloudLogout" class="editor-actions hidden"><button class="btn-t" type="button" onclick="signOutAdmin()">Sign out</button></div>
+</section>
+<section id="editorPanel" class="editor-panel hidden">
+<h2>Publish a New Article</h2>
+<p class="editor-note">Write directly here. Published articles and photos will be saved to the shared cloud archive.</p>
+<form id="articleForm" onsubmit="publishArticle(event)">
+<div class="editor-grid">
+<div class="editor-field"><label for="articleTitle">ARTICLE TITLE</label><input id="articleTitle" maxlength="120" required placeholder="Enter a clear, engaging headline"></div>
+<div class="editor-field"><label for="articleCategory">CATEGORY</label><select id="articleCategory"><option>Robotics & AI</option><option>Rehabilitation</option><option>Physical Activity & Fitness</option><option>Human Resilience</option><option>AI in Healthcare</option><option>Medical Innovation</option><option>Research & Science</option><option>News & Updates</option><option>Interviews & Experts</option></select></div>
+</div>
+<div class="editor-field"><label for="articleSummary">SHORT INTRODUCTION</label><input id="articleSummary" maxlength="240" required placeholder="A short summary shown in the article list"></div>
+<div class="editor-field"><label for="articleContent">ARTICLE TEXT</label><textarea id="articleContent" required placeholder="Write your article here... You can use a blank line to start a new paragraph. YouTube/TikTok links pasted here will be embedded automatically."></textarea></div>
+<div class="editor-field"><label for="articleImages">ARTICLE IMAGES</label><input id="articleImages" type="file" accept="image/*" multiple onchange="previewArticleImages(event)" style="padding:10px;border:1px solid var(--border);border-radius:9px;background:var(--bg);color:var(--text)"><small style="color:var(--muted)">Choose several photos. They will appear below the article text. Images are resized in your browser before saving.</small><div id="imagePreview" class="image-preview-grid"></div></div>
+<div class="editor-field"><label for="articleVideos">YOUTUBE / TIKTOK VIDEO LINKS</label><textarea id="articleVideos" style="min-height:90px" placeholder="Paste YouTube or TikTok links, one per line"></textarea><small style="color:var(--muted)">YouTube videos will be embedded. TikTok videos will be embedded when supported, with a direct link as fallback.</small></div>
+<div class="editor-actions"><button class="btn" type="submit">Publish Article</button><button class="btn-t" type="button" onclick="toggleEditor(false)">Cancel</button><span id="editorStatus" class="editor-note" aria-live="polite"></span></div>
+</form></section>
+<div id="blogList">
+<article class="blog-post" data-date="2026-11-23"><div class="blog-meta">📅 November 23 11:07, 2026 • Exhibition Highlights</div><h2 onclick="openItem('p1','blog')">Top 5 Breakthrough Medical Technologies from MEDICA 2026</h2><p style="color:var(--muted);margin-bottom:14px">From AI-powered navigation glasses replacing guide dogs (.lumen) to autonomous blood-drawing ultrasound robots (ROPHAI) and 72-hour live tumor drug screening.</p><button class="btn" onclick="openItem('p1','blog')">Read Full Article →</button></article>
+<article class="blog-post" data-date="2026-11-21"><div class="blog-meta">📅 November 21, 2026 • Robotics & Care</div><h2 onclick="openItem('p2','blog')">Inside Fourier GR-3: How Healthcare Humanoid Robots Are Built</h2><p style="color:var(--muted);margin-bottom:14px">A deep dive into soft impact-absorbing shells, 31 tactile body sensors, hot-swappable batteries, and real-world pricing in Europe.</p><button class="btn" onclick="openItem('p2','blog')">Read Full Article →</button></article>
+<article class="blog-post" data-date="2026-11-19"><div class="blog-meta">📅 November 19, 2026 • Materials Science</div><h2 onclick="openItem('p3','blog')">"Liquid Metal" in Robotics: Why Amorphous Alloys Beat Titanium</h2><p style="color:var(--muted);margin-bottom:14px">How bulk metallic glasses (invented in 1960/1992 and scaled by Heraeus Amloy) eliminate lubrication in robotic strain wave gears.</p><button class="btn" onclick="openItem('p3','blog')">Read Full Article →</button></article>
+<article class="blog-post" data-date="2026-11-17"><div class="blog-meta">📅 November 17, 2026 • Diagnostics</div><h2 onclick="openItem('p4','blog')">Handheld Ultrasound Buyer's Guide: Subscription vs. No-Fee Probes</h2><p style="color:var(--muted);margin-bottom:14px">Comparing wireless pocket ultrasound scanners (€1,500–€5,500) for doctors, aesthetics, and veterinary clinics across the EU.</p><button class="btn" onclick="openItem('p4','blog')">Read Full Article →</button></article>
+</div></div>
+
+<div id="articleView" class="wrap hidden"><div class="topic"><div style="color:var(--primary);font-weight:700;cursor:pointer;margin-bottom:14px" id="backBtn" onclick="goBack()">← Back</div><div id="tBody"></div></div></div>
+<footer>© 2026 MedTech & Robotics Pulse • <a href="mailto:info@example.com" style="color:#fff">Contact / Inquiries</a></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL='https://hfpxznrdxogetecammqd.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY='sb_publishable_bpLNmPl_RGgW1ew-upG1RQ_Lxa14Dv9';
+const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
+let currentUser=null;
+let lastTab='home',newestFirst=true;
+const CUSTOM_KEY='medicalRoboticsCustomArticlesV1';
+let customArticles=loadCustomArticles();
+const db={
+t1:'<h1>Humanoid Robots for Clinical Care</h1><div class="box"><strong>Fourier GR-3 ("Care-bot")</strong> — 165 cm, 71 kg, 31 tactile sensors. Price: $80k–$120k (~€163k in EU).</div><div class="box"><strong>Unitree G1</strong> — Compact research humanoid starting from €16,000.</div>',
+t2:'<h1>Wearable Exoskeletons</h1><div class="box"><strong>ABLE Human Motion (Spain)</strong> — Lightweight (~10 kg) CE-certified lower-limb exoskeleton.</div><div class="box"><strong>Upper-Limb Rehab</strong> — Fourier ArmMotus & AFH hand therapy systems.</div>',
+t3:'<h1>Surgical & Magnetic Microrobots</h1><div class="box"><strong>Nanoflex Robotics</strong> — Magnetically steered soft microcatheters for remote stroke surgery.</div><div class="box"><strong>Agilis Robotics</strong> — 2.8–3.5 mm flexible endoscopic robotic arms.</div>',
+t4:'<h1>Brain-Computer Interfaces (BCI)</h1><div class="box"><strong>CorTec Brain Interchange™</strong> — Battery-free wireless closed-loop cortical implant (32 channels, <25 ms latency).</div>',
+t5:'<h1>Portable Ultrasound Scanners</h1><div class="box"><strong>No-Subscription Probes (Aco Healthcare neo, Mindray TE Air)</strong> — €1,500 – €4,500.</div><div class="box"><strong>Subscription Probes (Butterfly iQ+)</strong> — ~€2,700 + annual fee.</div>',
+t6:'<h1>Cold Plasma & Hypoxic Therapy</h1><div class="box"><strong>Adtec SteriPlas</strong> — Cold argon plasma for chronic wound healing.</div><div class="box"><strong>Ai Mediq ReOxy®</strong> — Intermittent hypoxic-hyperoxic respiratory therapy.</div>',
+t7:'<h1>Actuators, Gears & Force Sensors</h1><div class="box"><strong>Suppliers:</strong> Hiwin, igus, Festo, Gear Motion, Kistler Instrumente.</div>',
+t8:'<h1>Amorphous Metals, Nitinol & Micro-CNC</h1><div class="box"><strong>Tech:</strong> Heraeus Amloy, ADMEDES, JMTEC (0.1 mm), Acme Monaco, Materialise.</div>',
+t9:'<h1>Physical Activity, Fitness & Resilience</h1><div class="box"><strong>Movement & Wellbeing</strong> — The role of regular physical activity, mobility, strength, balance, and endurance in everyday wellbeing.</div><div class="box"><strong>Adaptive Sports & Inclusive Fitness</strong> — Sport, accessible exercise, and movement opportunities for people with different abilities.</div><div class="box"><strong>Rehabilitation & Recovery</strong> — How physiotherapy, assistive technologies, and carefully guided activity can support recovery and independence.</div><div class="box"><strong>Human Resilience</strong> — Personal stories of persistence, motivation, and overcoming physical challenges.</div>',
+p1:'<h1>Top 5 Breakthrough Medical Technologies from MEDICA 2026</h1><p>1. <strong>.lumen (Romania):</strong> AI glasses replacing guide dogs.<br>2. <strong>ROPHAI (USA):</strong> Autonomous ultrasound-guided blood-drawing robot.<br>3. <strong>Allow Motion (Belgium):</strong> 3D-printed AI bionic hand.<br>4. <strong>Exalt FlexCo (Austria):</strong> 72-hour live tumor drug screening.<br>5. <strong>Percisio (France):</strong> Radiation-free AR surgical navigation.</p>',
+p2:'<h1>Inside Fourier GR-3: Healthcare Humanoid Robots</h1><p>Unlike factory robots, Fourier GR-3 uses a soft padded polymer shell, 31 pressure sensors, and force-feedback actuators (FSA) to safely assist elderly patients and hospital staff. Battery life is ~3 hours with hot-swap capability.</p>',
+p3:'<h1>"Liquid Metal" in Robotics: Amorphous Alloys</h1><p>First created as thin films in 1960 and bulk alloys in 1992, amorphous metals (scaled by Heraeus Amloy in 2019) lack a crystalline lattice. They are 2–3x stronger than titanium and run without lubrication in robotic strain wave gears.</p>',
+p4:'<h1>Handheld Ultrasound Buyer\'s Guide</h1><p>Pocket Wi-Fi probes weigh 150–250g and connect to iOS/Android. Models like Aco Healthcare neo and Mindray TE Air require zero annual fees (€1,500–€4,500), making them popular in EU veterinary and private clinics.</p>'
+};
+function loadCustomArticles(){try{return JSON.parse(localStorage.getItem(CUSTOM_KEY)||'[]')}catch(e){return []}}
+function saveCustomArticles(){try{localStorage.setItem(CUSTOM_KEY,JSON.stringify(customArticles));return true}catch(e){return false}}
+function escapeHTML(value){return String(value).replace(/[&<>\"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[ch]))}
+function formatArticleText(value){return value.split(/\n\s*\n/).map(part=>{const urlPattern=/(https?:\/\/[^\s<>]+)/g;let html='';let last=0;let match;while((match=urlPattern.exec(part))!==null){const raw=match[0].replace(/[),.!?]+$/,'');const trailing=match[0].slice(raw.length);html+=escapeHTML(part.slice(last,match.index)).replace(/\n/g,'<br>');const video=normalizeVideoUrl(raw);if(video){html+='</p>'+renderVideoEmbeds([raw])+'<p>';}else{html+='<a href="'+escapeHTML(raw)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(raw)+'</a>';}html+=escapeHTML(trailing);last=match.index+match[0].length;}html+=escapeHTML(part.slice(last)).replace(/\n/g,'<br>');return html?'<p>'+html+'</p>':''}).join('')}
+function renderArticleImages(images){if(!images||!images.length)return '';return '<div class=\"article-images\">'+images.map((img,i)=>'<figure><img src=\"'+img.data+'\" alt=\"'+escapeHTML(img.name||('Article image '+(i+1)))+'\" loading=\"lazy\"></figure>').join('')+'</div>'}
+function resizeImage(file){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onerror=()=>reject(new Error('Could not read image'));reader.onload=()=>{const im=new Image();im.onerror=()=>reject(new Error('Invalid image'));im.onload=()=>{const max=1400,scale=Math.min(1,max/Math.max(im.width,im.height));const canvas=document.createElement('canvas');canvas.width=Math.round(im.width*scale);canvas.height=Math.round(im.height*scale);canvas.getContext('2d').drawImage(im,0,0,canvas.width,canvas.height);resolve({name:file.name,data:canvas.toDataURL('image/jpeg',0.78)})};im.src=reader.result};reader.readAsDataURL(file)})}
+function previewArticleImages(event){const files=Array.from(event.target.files||[]);const preview=document.getElementById('imagePreview');preview.innerHTML='';if(files.length>8){document.getElementById('editorStatus').textContent='Please choose no more than 8 images.';event.target.value='';return}files.forEach(file=>{if(!file.type.startsWith('image/'))return;const img=document.createElement('img');img.alt=file.name;const reader=new FileReader();reader.onload=()=>img.src=reader.result;reader.readAsDataURL(file);preview.appendChild(img)})}
+function normalizeVideoUrl(raw){try{const u=new URL(raw.trim());const host=u.hostname.toLowerCase().replace(/^www\./,'');if(host==='youtu.be'){const id=u.pathname.split('/').filter(Boolean)[0];return id&&/^[A-Za-z0-9_-]{6,}$/.test(id)?{type:'youtube',id,url:'https://www.youtube.com/watch?v='+id}:null}if(host==='youtube.com'||host==='m.youtube.com'){let id=u.searchParams.get('v');if(!id){const m=u.pathname.match(/^\/(?:embed|shorts)\/([A-Za-z0-9_-]+)/);id=m&&m[1]}return id&&/^[A-Za-z0-9_-]{6,}$/.test(id)?{type:'youtube',id,url:'https://www.youtube.com/watch?v='+id}:null}if(host==='tiktok.com'){const m=u.pathname.match(/\/video\/(\d+)/);return m?{type:'tiktok',id:m[1],url:u.href}:null}}catch(e){}return null}
+function renderVideoEmbeds(urls){return (urls||[]).map(raw=>{const v=normalizeVideoUrl(raw);if(!v)return '<p><a href="'+escapeHTML(raw)+'" target="_blank" rel="noopener noreferrer">Open video link</a></p>';if(v.type==='youtube')return '<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin:18px 0"><iframe src="https://www.youtube.com/embed/'+v.id+'?rel=0" title="YouTube video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div><p><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>';return '<div style="max-width:420px;margin:18px auto"><iframe src="https://www.tiktok.com/embed/v2/'+v.id+'" title="TikTok video" loading="lazy" allowfullscreen style="width:100%;height:740px;border:0;border-radius:12px"></iframe><p><a href="'+escapeHTML(v.url)+'" target="_blank" rel="noopener noreferrer">Watch on TikTok</a></p></div>'}).join('')}
+function toggleEditor(force){const panel=document.getElementById('editorPanel');const shouldShow=typeof force==='boolean'?force:panel.classList.contains('hidden');panel.classList.toggle('hidden',!shouldShow);if(shouldShow){panel.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('articleTitle').focus()}}
+function renderCustomArticles(){const list=document.getElementById('blogList');if(!list)return;list.querySelectorAll('[data-custom="true"]').forEach(el=>el.remove());customArticles.forEach(article=>{const card=document.createElement('article');card.className='blog-post';card.dataset.date=article.date;card.dataset.custom='true';card.innerHTML='<div class="blog-meta">📅 '+escapeHTML(article.dateLabel)+' • '+escapeHTML(article.category)+' <span class="local-badge">Your article</span></div><h2></h2><p style="color:var(--muted);margin-bottom:14px"></p><button class="btn" type="button">Read Full Article →</button>';card.querySelector('h2').textContent=article.title;card.querySelector('p').textContent=article.summary;card.querySelector('button').addEventListener('click',()=>openCustomArticle(article.id));list.appendChild(card)});sortBlog()}
+async function publishArticle(event){event.preventDefault();const status=document.getElementById('editorStatus');if(!currentUser){status.textContent='Please sign in with the administrator email first.';return}const title=document.getElementById('articleTitle').value.trim();const category=document.getElementById('articleCategory').value;const summary=document.getElementById('articleSummary').value.trim();const content=document.getElementById('articleContent').value.trim();const videoInput=document.getElementById('articleVideos').value.trim();const videoUrls=videoInput?videoInput.split(/\n+/).map(x=>x.trim()).filter(Boolean):[];const files=Array.from(document.getElementById('articleImages').files||[]);if(!title||!summary||!content){status.textContent='Please complete all required fields.';return}if(files.length>8){status.textContent='Please choose no more than 8 images.';return}const invalid=videoUrls.find(x=>!normalizeVideoUrl(x));if(invalid){status.textContent='Use valid YouTube or TikTok video links, one per line.';return}status.textContent='Uploading images and publishing…';try{const now=new Date();const id=crypto.randomUUID();const images=[];for(const file of files){const resized=await resizeImage(file);const blob=await (await fetch(resized.data)).blob();const path=currentUser.id+'/'+id+'/'+crypto.randomUUID()+'.jpg';const {error:uploadError}=await supabaseClient.storage.from('article-images').upload(path,blob,{contentType:'image/jpeg',upsert:false});if(uploadError)throw uploadError;const {data}=supabaseClient.storage.from('article-images').getPublicUrl(path);images.push({name:file.name,url:data.publicUrl,path})}const payload={id,title,category,summary,content,images,video_urls:videoUrls,published_at:now.toISOString(),author_id:currentUser.id};const {error}=await supabaseClient.from('articles').insert(payload);if(error)throw error;await loadCloudArticles();document.getElementById('articleForm').reset();document.getElementById('imagePreview').innerHTML='';toggleEditor(false);status.textContent='Published to the shared cloud archive.';}catch(e){console.error(e);status.textContent='Could not publish: '+(e.message||'check Supabase tables, storage policies and admin access.')}}
+async function loadCloudArticles(){const {data,error}=await supabaseClient.from('articles').select('*').order('published_at',{ascending:false});if(error){console.error(error);return}customArticles=(data||[]).map(a=>({id:a.id,title:a.title,category:a.category,summary:a.summary,content:a.content,images:(a.images||[]).map(x=>({name:x.name,data:x.url})),videoUrls:a.video_urls||[],date:(a.published_at||'').slice(0,10),dateLabel:new Date(a.published_at).toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'})}));renderCustomArticles()}
+async function sendAdminLogin(){const email=document.getElementById('adminEmail').value.trim();const status=document.getElementById('cloudAuthStatus');if(!email){status.textContent='Enter your administrator email.';return}status.textContent='Sending secure sign-in link…';const {error}=await supabaseClient.auth.signInWithOtp({email,options:{emailRedirectTo:window.location.href}});status.textContent=error?'Could not send link: '+error.message:'Check your email and open the sign-in link on this website.'}
+async function signOutAdmin(){await supabaseClient.auth.signOut();currentUser=null;updateCloudAccess();}
+function updateCloudAccess(){const logged=!!currentUser;document.getElementById('cloudLogin').classList.toggle('hidden',logged);document.getElementById('cloudLogout').classList.toggle('hidden',!logged);document.getElementById('writeArticleBtn').classList.toggle('hidden',!logged);document.getElementById('editorPanel').classList.add('hidden');document.getElementById('cloudAuthStatus').textContent=logged?'Signed in as '+currentUser.email+'. Cloud publishing is enabled.':'Sign in with the administrator email to publish articles to the shared cloud archive.'}
+function openCustomArticle(id){const article=customArticles.find(item=>item.id===id);if(!article)return;lastTab='blog';document.getElementById('tBody').innerHTML='<div class="blog-meta">'+escapeHTML(article.dateLabel)+' • '+escapeHTML(article.category)+'</div><h1>'+escapeHTML(article.title)+'</h1><p style="color:var(--muted);font-size:18px;margin:12px 0 22px">'+escapeHTML(article.summary)+'</p>'+formatArticleText(article.content)+renderArticleImages(article.images)+renderVideoEmbeds(article.videoUrls);document.getElementById('homeView').classList.add('hidden');document.getElementById('blogView').classList.add('hidden');document.getElementById('articleView').classList.remove('hidden');document.getElementById('backBtn').textContent='← Back to All Articles';window.location.hash='';window.scrollTo(0,0)}
+function showTab(tab){lastTab=tab;document.getElementById('homeView').classList.toggle('hidden',tab!=='home');document.getElementById('blogView').classList.toggle('hidden',tab!=='blog');document.getElementById('articleView').classList.add('hidden');document.getElementById('navHome').classList.toggle('active',tab==='home');document.getElementById('navBlog').classList.toggle('active',tab==='blog');window.scrollTo(0,0)}
+function openItem(k,from){if(!db[k])return;lastTab=from;document.getElementById('tBody').innerHTML=db[k];document.getElementById('homeView').classList.add('hidden');document.getElementById('blogView').classList.add('hidden');document.getElementById('articleView').classList.remove('hidden');document.getElementById('backBtn').textContent=from==='blog'?'← Back to All Articles':'← Back to Topics';window.location.hash=k;window.scrollTo(0,0)}
+function goBack(){history.pushState("",document.title,window.location.pathname);showTab(lastTab)}
+function theme(){const h=document.documentElement,b=document.getElementById('tBtn');if(h.getAttribute('data-theme')==='dark'){h.removeAttribute('data-theme');b.textContent='🌙 Dark'}else{h.setAttribute('data-theme','dark');b.textContent='☀️ Light'}}
+function find(){const q=document.getElementById('q').value.toLowerCase();document.querySelectorAll('.card').forEach(x=>x.classList.toggle('hidden',!x.innerText.toLowerCase().includes(q)))}
+function sortBlog(){const l=document.getElementById('blogList'),p=Array.from(l.querySelectorAll('.blog-post'));p.sort((a,b)=>newestFirst?new Date(b.dataset.date)-new Date(a.dataset.date):new Date(a.dataset.date)-new Date(b.dataset.date));p.forEach(x=>l.appendChild(x))}
+function toggleSort(){newestFirst=!newestFirst;document.getElementById('sortBtn').textContent=newestFirst?'↓ Newest First':'↑ Oldest First';sortBlog()}
+window.addEventListener('DOMContentLoaded',async()=>{renderCustomArticles();sortBlog();updateCloudAccess();const {data:{session}}=await supabaseClient.auth.getSession();currentUser=session?.user||null;updateCloudAccess();supabaseClient.auth.onAuthStateChange((_event,session)=>{currentUser=session?.user||null;updateCloudAccess();if(currentUser)loadCloudArticles()});await loadCloudArticles();const k=window.location.hash.replace('#','');if(k&&db[k])openItem(k,k.startsWith('p')?'blog':'home')});
+</script>
+</body>
+</html>
